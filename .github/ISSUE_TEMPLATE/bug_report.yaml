@@ -1,0 +1,63 @@
+name: 버그 제보
+description: 봇 동작 중 발생한 문제나 에러를 보고합니다.
+labels: [ 버그 ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐞 Discord 봇 버그 제보
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 어떤 문제가 발생했나요?
+      description: 봇에서 경험한 문제를 상세하게 작성해 주세요.
+      placeholder: |
+        예) 특정 명령어를 입력했을 때 봇이 응답하지 않습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 재현 방법
+      description: 버그를 직접 재현할 수 있는 절차를 순서대로 써 주세요.
+      placeholder: |
+        1. 텍스트 채널에서 /play 명령어 입력
+        2. 아무 반응 없음
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 기대한 동작
+      description: 정상적으로 동작했다면 어떤 결과가 나와야 하는지 작성해 주세요.
+      placeholder: |
+        예) /play 명령어에 대해 음악이 재생됨을 알리는 메시지 출력
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 관련 로그/에러 메시지
+      description: 콘솔 로그, 예외 메시지 등 있으면 붙여넣어 주세요.
+      placeholder: |
+        예) [WARN] JDA: Could not connect to Discord gateway...
+    validations:
+      required: false
+
+  - type: textarea
+    id: env-info
+    attributes:
+      label: 환경 정보
+      description: 아래 항목 중 해당하는 정보를 적어주세요.
+      placeholder: |
+        - OS: Windows/Mac/Linux
+        - Java 버전: (예: 21)
+        - JDA 버전: (예: 5.5.1)
+        - Spring Boot 버전: (예: 3.5.0)
+        - 봇 배포 방식: (로컬 실행, Docker, 클라우드 등)
+    validations:
+      required: false

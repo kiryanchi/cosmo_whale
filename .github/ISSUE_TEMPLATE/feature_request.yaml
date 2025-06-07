@@ -1,0 +1,48 @@
+name: 기능 제안
+description: Discord 봇에 추가하고 싶은 기능/명령어/개선 사항을 제안합니다.
+labels: [ 기능 ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Discord 봇 기능 제안
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 제안하는 기능/명령어는 무엇인가요?
+      description: 봇에 새롭게 추가하고 싶은 기능이나 개선점을 구체적으로 작성해 주세요.
+      placeholder: |
+        예) /vote 명령어로 간단한 투표 기능을 추가하고 싶어요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: usage-scenario
+    attributes:
+      label: 이 기능이 필요한 상황/시나리오
+      description: 실제로 이 기능이 어떻게 사용될지 간단한 예시를 적어주세요.
+      placeholder: |
+        예) 이벤트 진행 시 투표로 결과 집계
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 기대하는 동작
+      description: 구현 시 기대하는 동작을 상세하게 작성해 주세요.
+      placeholder: |
+        예) /vote 입력 시 봇이 투표 항목을 받고, 이모지 리액션으로 투표를 집계
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 참고 자료/스크린샷/기타
+      description: 관련 코드, 참고 링크, 이미지 등이 있다면 첨부해 주세요.
+      placeholder: |
+        예) https://discord.com/developers/docs/interactions/application-commands
+    validations:
+      required: false

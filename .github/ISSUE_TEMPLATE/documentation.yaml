@@ -1,0 +1,38 @@
+name: 문서화 요청
+description: 봇의 사용법, 명령어, 설정 방법 등 문서 개선이 필요할 때 작성합니다.
+labels: [ 문서화 ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 문서화 요청
+
+  - type: textarea
+    id: docs-description
+    attributes:
+      label: 어떤 부분의 문서화가 필요하신가요?
+      description: 추가/수정이 필요한 문서(README, 명령어 설명 등)를 적어주세요.
+      placeholder: |
+        예) /play, /pause 등 명령어별 사용법 설명 추가
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 이유/필요성
+      description: 이 문서가 필요한 이유를 간략히 적어주세요.
+      placeholder: |
+        예) 처음 사용하는 유저가 명령어 사용법을 쉽게 알 수 있도록
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 참고 자료/링크/기타
+      description: 관련 문서, 이미지, 기타 참고자료가 있다면 첨부해 주세요.
+      placeholder: |
+        예) 기존에 사용하던 봇 설명 링크 등
+    validations:
+      required: false
